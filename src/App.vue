@@ -1,10 +1,25 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/">Меню</router-link>
+    |
+    <router-link to="/about">Доставка и оплата</router-link>
+    |
+    <router-link to="/products">Контакты</router-link>
+    <app-auth></app-auth>
   </div>
   <router-view />
 </template>
+
+<script>
+import AppAuth from "./components/AppAuth";
+
+export default {
+  name: "App",
+  components: {
+    AppAuth,
+  },
+};
+</script>
 
 <style>
 #app {
@@ -25,6 +40,6 @@
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #545454;
 }
 </style>
